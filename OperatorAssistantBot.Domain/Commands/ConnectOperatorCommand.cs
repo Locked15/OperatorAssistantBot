@@ -26,7 +26,7 @@ namespace OperatorAssistantBot.Domain.Commands
             {
                 new[]
                 {
-                    new KeyboardButton("\U0001F3E0 Главная"),
+                    new KeyboardButton("\U0001F3E0 Часто задаваемые вопросы"),
                     new KeyboardButton("\U0001F4D6 Вызвать оператора")
                 }
             };
@@ -38,7 +38,7 @@ namespace OperatorAssistantBot.Domain.Commands
             MailAddress to = new MailAddress("amir.diarov@yandex.ru");
             MailMessage m = new MailMessage(from, to);
             m.Subject = "Новая заявка";
-            m.Body = $"ID чата: {message.Chat.Id}";
+            m.Body = $"ID чата: {message.Chat.Id}\nОт пользователя: {message.Chat.FirstName}";
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.Credentials = new NetworkCredential("diyarov.amir.r@gmail.com", "ovcyepfiuskjuehf");
             smtp.EnableSsl = true;

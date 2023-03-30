@@ -15,6 +15,10 @@ namespace OperatorAssistantBot.Controllers
             _telegramBotClient = telegramBotClient;
         }
 
+        /// <summary>
+        /// Асинхронный метод реагирующий на поступающие команды
+        /// </summary>
+        /// <param name="update"></param>
         public async void CommandProcessing(Update update)
         {
             if (update == null) return;

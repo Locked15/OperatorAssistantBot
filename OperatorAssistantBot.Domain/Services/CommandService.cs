@@ -14,6 +14,7 @@ namespace OperatorAssistantBot.Domain.Services
             {
                 new StartCommand(),
                 new ConnectOperatorCommand(),
+                new QuestionsListCommand(),
             };
         }
 

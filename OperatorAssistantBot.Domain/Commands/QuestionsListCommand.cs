@@ -6,9 +6,9 @@ using Telegram.Bot;
 
 namespace OperatorAssistantBot.Domain.Commands
 {
-    public class StartCommand : TelegramCommand
+    public class QuestionsListCommand : TelegramCommand
     {
-        public override string Name => @"/start";
+        public override string Name => "\U0001F3E0 Часто задаваемые вопросы";
 
         public override bool Contains(Message message)
         {
@@ -30,9 +30,7 @@ namespace OperatorAssistantBot.Domain.Commands
             };
             var replyMarkup = new ReplyKeyboardMarkup(keyBoard) { ResizeKeyboard = true };
 
-            await botClient.SendTextMessageAsync(message.Chat.Id, "Здравствуйте! Я умный ассистент." +
-                                    "\nВыберите интересующий вас вопрос и я отвечу." +
-                                    "\nТакже вы можете вызвать оператора нажав соответствующию кнопку.", replyMarkup: replyMarkup);
+            await botClient.SendTextMessageAsync(message.Chat.Id, "Тут должен быть список вопросов и ответов на них", replyMarkup: replyMarkup);
         }
     }
 }
