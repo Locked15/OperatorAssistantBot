@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorAssistantBot", "OperatorAssistantBot\OperatorAssistantBot.csproj", "{6C941861-AEE4-49C7-8ADB-90D61E6C83A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorAssistantBot.Domain", "OperatorAssistantBot.Domain\OperatorAssistantBot.Domain.csproj", "{0E71907B-60CA-4ED8-AC2A-D203AD0779E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperatorAssistantBot.Domain", "OperatorAssistantBot.Domain\OperatorAssistantBot.Domain.csproj", "{0E71907B-60CA-4ED8-AC2A-D203AD0779E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_NeutralResourcesLanguage = ru-RU
 		SolutionGuid = {4D24479F-8D5D-4DFD-B9F8-29EF6CBF5549}
 	EndGlobalSection
 EndGlobal

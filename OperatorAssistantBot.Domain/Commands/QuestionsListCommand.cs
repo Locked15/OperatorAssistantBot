@@ -3,6 +3,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types;
 using Telegram.Bot;
+using OperatorAssistantBot;
 
 namespace OperatorAssistantBot.Domain.Commands
 {
@@ -30,7 +31,7 @@ namespace OperatorAssistantBot.Domain.Commands
             };
             var replyMarkup = new ReplyKeyboardMarkup(keyBoard) { ResizeKeyboard = true };
 
-            await botClient.SendTextMessageAsync(message.Chat.Id, "Тут должен быть список вопросов и ответов на них", replyMarkup: replyMarkup);
+            await botClient.SendTextMessageAsync(message.Chat.Id, Properties.i18n.Strings.Interaction_HelpMessage, replyMarkup: replyMarkup);
         }
     }
 }
